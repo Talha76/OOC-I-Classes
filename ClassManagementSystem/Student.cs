@@ -6,18 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClassManagementSystem
 {
-    internal class Student
+    internal class Student : Person
     {
-        public int id { get; }
-        public string name { get; }
-        public int deptCode { get; }
         public int section { get; }
 
-        public Student(int id, string name, int deptCode, int section)
+        public Student(int id, string name, Department dept, int section) : base(id, name, dept)
         {
-            this.id = id;
-            this.name = name;
-            this.deptCode = deptCode;
             this.section = section;
         }
     }
