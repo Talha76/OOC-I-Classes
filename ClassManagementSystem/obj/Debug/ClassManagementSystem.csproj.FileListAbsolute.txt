@@ -1,0 +1,11 @@
+E:\OOC-I-Classes\ClassManagementSystem\bin\Debug\ClassManagementSystem.exe.config
+E:\OOC-I-Classes\ClassManagementSystem\bin\Debug\ClassManagementSystem.exe
+E:\OOC-I-Classes\ClassManagementSystem\bin\Debug\ClassManagementSystem.pdb
+E:\OOC-I-Classes\ClassManagementSystem\obj\Debug\ClassManagementSystem.csproj.AssemblyReference.cache
+E:\OOC-I-Classes\ClassManagementSystem\obj\Debug\ClassManagementSystem.csproj.SuggestedBindingRedirects.cache
+E:\OOC-I-Classes\ClassManagementSystem\obj\Debug\ClassManagementSystem.Form1.resources
+E:\OOC-I-Classes\ClassManagementSystem\obj\Debug\ClassManagementSystem.Properties.Resources.resources
+E:\OOC-I-Classes\ClassManagementSystem\obj\Debug\ClassManagementSystem.csproj.GenerateResource.cache
+E:\OOC-I-Classes\ClassManagementSystem\obj\Debug\ClassManagementSystem.csproj.CoreCompileInputs.cache
+E:\OOC-I-Classes\ClassManagementSystem\obj\Debug\ClassManagementSystem.exe
+E:\OOC-I-Classes\ClassManagementSystem\obj\Debug\ClassManagementSystem.pdb
