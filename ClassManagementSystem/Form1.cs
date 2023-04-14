@@ -14,11 +14,16 @@ namespace ClassManagementSystem
     {
         List<Student> studentList;
         List<Department> deptList;
+        List<Teacher> teacherList;
+        List<Course> courseList;
+
         public Form1()
         {
             InitializeComponent();
             studentList = new List<Student>();
             deptList = new List<Department>();
+            teacherList = new List<Teacher>();
+            courseList = new List<Course>();
         }
 
         private Department getDept(int deptCode)
@@ -26,6 +31,24 @@ namespace ClassManagementSystem
             foreach (Department dept in deptList)
             {
                 if (dept.code == deptCode) return dept;
+            }
+            return null;
+        }
+
+        private Course getCourse(int courseCode)
+        {
+            foreach (Course course in courseList)
+            {
+                if (course.code == courseCode) return course;
+            }
+            return null;
+        }
+
+        private Teacher getTeacher(int teacherId)
+        {
+            foreach (Teacher teacher in teacherList)
+            {
+                if (teacher.id == teacherId) return teacher;
             }
             return null;
         }
@@ -180,6 +203,179 @@ namespace ClassManagementSystem
             }
 
             // Main task
+            string name = addTeacherName.Text;
+            int id = int.Parse(addTeacherId.Text);
+            string designation = addTeacherDesignation.Text;
+            int deptCode = int.Parse(addTeacherDeptCode.Text);
+
+            if (getDept(deptCode) == null)
+            {
+                MessageBox.Show("Department doesn't exist!");
+                return;
+            }
+
+            if (designation == "Lecturer")
+            {
+                teacherList.Add(new Lecturer(id, name, getDept(deptCode)));
+            }
+            else
+            {
+                teacherList.Add(new Professor(id, name, getDept(deptCode)));
+            }
+
+            MessageBox.Show("Teacher added.");
+        }
+
+        private void showTeachersButton_Click(object sender, EventArgs e)
+        {
+            if (showTeachersDeptCode.Text.Length == 0)
+            {
+                MessageBox.Show("Insert proper dept code.");
+                return;
+            }
+            foreach (char ch in showTeachersDeptCode.Text)
+            {
+                if (ch < '0' || ch > '9')
+                {
+                    MessageBox.Show("Insert proper dept code");
+                    return;
+                }
+            }
+
+            int deptCode = int.Parse(showTeachersDeptCode.Text);
+
+            showTeachersListbox.Items.Clear();
+            showTeachersListbox.Items.Add("Name\tID\tDesignation");
+            foreach (Teacher teacher in teacherList)
+            {
+                if (teacher.dept.code == deptCode)
+                {
+                    string data = teacher.name + "\t" + teacher.id + "\t" + teacher.GetType().Name;
+                    showTeachersListbox.Items.Add(data);
+                }
+            }
+        }
+
+        private void addCourseButton_Click(object sender, EventArgs e)
+        {
+            if (addCourseName.Text.Length == 0)
+            {
+                MessageBox.Show("Insert Proper Course Name.");
+                return;
+            }
+            if (addCourseCode.Text.Length == 0)
+            {
+                MessageBox.Show("Insert Proper Course Code.");
+                return;
+            }
+            foreach (char ch in addCourseCode.Text)
+            {
+                if (ch < '0' || ch > '9')
+                {
+                    MessageBox.Show("Insert proper course code");
+                    return;
+                }
+            }
+
+            string name = addCourseName.Text;
+            int code = int.Parse(addCourseCode.Text);
+
+            courseList.Add(new Course(code, name));
+
+            MessageBox.Show("Course Added");
+        }
+
+        private void assignCourseTeacherButton_Click(object sender, EventArgs e)
+        {
+            if (assignCourseTeacherId.Text.Length == 0)
+            {
+                MessageBox.Show("Insert proper teacher id.");
+                return;
+            }
+            if (assignCourseCode.Text.Length == 0)
+            {
+                MessageBox.Show("Insert proper teacher id.");
+                return;
+            }
+            foreach (char ch in assignCourseTeacherId.Text)
+            {
+                if (ch < '0' || ch > '9')
+                {
+                    MessageBox.Show("Insert proper course code");
+                    return;
+                }
+            }
+            foreach (char ch in assignCourseCode.Text)
+            {
+                if (ch < '0' || ch > '9')
+                {
+                    MessageBox.Show("Insert proper course code");
+                    return;
+                }
+            }
+
+            int teacherId = int.Parse(assignCourseTeacherId.Text);
+            int courseCode = int.Parse(assignCourseCode.Text);
+
+            if (getTeacher(teacherId) == null)
+            {
+                MessageBox.Show("Teacher doesn't exist.");
+                return;
+            }
+            if (getCourse(courseCode) == null)
+            {
+                MessageBox.Show("Course doesn't exist.");
+            }
+
+            if (getTeacher(teacherId) is Lecturer)
+            {
+                if (courseCode % 2 == 1)
+                {
+                    MessageBox.Show("Lecturers can't take theory courses.");
+                    return;
+                }
+            }
+
+            getTeacher(teacherId).assignCourse(getCourse(courseCode));
+
+            MessageBox.Show("Course assigned to teacher.");
+        }
+
+        private void showAssignedCoursesButton_Click(object sender, EventArgs e)
+        {
+            if (showAssignedCoursesTeacherId.Text.Length == 0)
+            {
+                MessageBox.Show("Please insert proper teacher id");
+                return;
+            }
+            foreach (char ch in assignCourseCode.Text)
+            {
+                if (ch < '0' || ch > '9')
+                {
+                    MessageBox.Show("Insert proper teacher id");
+                    return;
+                }
+            }
+
+            int id = int.Parse(showAssignedCoursesTeacherId.Text);
+
+            if (getTeacher(id) == null)
+            {
+                MessageBox.Show("Teacher doesn't exist");
+                return;
+            }
+
+            assignedCourseListbox.Items.Clear();
+            assignedCourseListbox.Items.Add("Name\tCode\tType");
+
+            List<Course> teacherCourses = getTeacher(id).getCourseList();
+            foreach (Course course in teacherCourses)
+            {
+                string data = course.name + "\t" + course.code + "\t";
+                if (course.code % 2 == 0) data += "Lab";
+                else data += "Theory";
+                assignedCourseListbox.Items.Add(data);
+            }
         }
     }
 }

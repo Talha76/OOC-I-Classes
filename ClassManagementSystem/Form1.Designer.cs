@@ -50,6 +50,7 @@
             this.showStudentsDeptCode = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.addTeacherDesignation = new System.Windows.Forms.ComboBox();
             this.addTeacherDeptCode = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,12 +64,44 @@
             this.showTeachersButton = new System.Windows.Forms.Button();
             this.showTeachersDeptCode = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.addTeacherDesignation = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.addCourseButton = new System.Windows.Forms.Button();
+            this.addCourseCode = new System.Windows.Forms.TextBox();
+            this.addCourseName = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.assignCourseTeacherButton = new System.Windows.Forms.Button();
+            this.assignCourseCode = new System.Windows.Forms.TextBox();
+            this.assignCourseTeacherId = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.enrollCourseStudentButton = new System.Windows.Forms.Button();
+            this.enrollCourseCode = new System.Windows.Forms.TextBox();
+            this.enrollCourseStudentId = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.assignedCourseListbox = new System.Windows.Forms.ListBox();
+            this.showAssignedCoursesButton = new System.Windows.Forms.Button();
+            this.showAssignedCoursesTeacherId = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.enrolledCourseListbox = new System.Windows.Forms.ListBox();
+            this.showEnrolledCourses = new System.Windows.Forms.Button();
+            this.showEnrolledCoursesStudentId = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -285,6 +318,17 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Add Teacher";
             // 
+            // addTeacherDesignation
+            // 
+            this.addTeacherDesignation.FormattingEnabled = true;
+            this.addTeacherDesignation.Items.AddRange(new object[] {
+            "Lecturer",
+            "Professor"});
+            this.addTeacherDesignation.Location = new System.Drawing.Point(161, 108);
+            this.addTeacherDesignation.Name = "addTeacherDesignation";
+            this.addTeacherDesignation.Size = new System.Drawing.Size(99, 28);
+            this.addTeacherDesignation.TabIndex = 9;
+            // 
             // addTeacherDeptCode
             // 
             this.addTeacherDeptCode.Location = new System.Drawing.Point(160, 145);
@@ -339,7 +383,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(16, 72);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 30);
+            this.label8.Size = new System.Drawing.Size(87, 20);
             this.label8.TabIndex = 2;
             this.label8.Text = "Teacher id:";
             // 
@@ -380,8 +424,9 @@
             this.showTeachersButton.Name = "showTeachersButton";
             this.showTeachersButton.Size = new System.Drawing.Size(133, 29);
             this.showTeachersButton.TabIndex = 4;
-            this.showTeachersButton.Text = "Show Students";
+            this.showTeachersButton.Text = "Show Teachers";
             this.showTeachersButton.UseVisualStyleBackColor = true;
+            this.showTeachersButton.Click += new System.EventHandler(this.showTeachersButton_Click);
             // 
             // showTeachersDeptCode
             // 
@@ -399,22 +444,278 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "Department code:";
             // 
-            // addTeacherDesignation
+            // groupBox6
             // 
-            this.addTeacherDesignation.FormattingEnabled = true;
-            this.addTeacherDesignation.Items.AddRange(new object[] {
-            "Lecturer",
-            "Professor"});
-            this.addTeacherDesignation.Location = new System.Drawing.Point(161, 108);
-            this.addTeacherDesignation.Name = "addTeacherDesignation";
-            this.addTeacherDesignation.Size = new System.Drawing.Size(99, 28);
-            this.addTeacherDesignation.TabIndex = 9;
+            this.groupBox6.Controls.Add(this.addCourseButton);
+            this.groupBox6.Controls.Add(this.addCourseCode);
+            this.groupBox6.Controls.Add(this.addCourseName);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Location = new System.Drawing.Point(789, 25);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(284, 151);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Add Course";
+            // 
+            // addCourseButton
+            // 
+            this.addCourseButton.Location = new System.Drawing.Point(93, 107);
+            this.addCourseButton.Name = "addCourseButton";
+            this.addCourseButton.Size = new System.Drawing.Size(75, 29);
+            this.addCourseButton.TabIndex = 9;
+            this.addCourseButton.Text = "Add";
+            this.addCourseButton.UseVisualStyleBackColor = true;
+            this.addCourseButton.Click += new System.EventHandler(this.addCourseButton_Click);
+            // 
+            // addCourseCode
+            // 
+            this.addCourseCode.Location = new System.Drawing.Point(164, 66);
+            this.addCourseCode.Name = "addCourseCode";
+            this.addCourseCode.Size = new System.Drawing.Size(100, 26);
+            this.addCourseCode.TabIndex = 8;
+            // 
+            // addCourseName
+            // 
+            this.addCourseName.Location = new System.Drawing.Point(164, 30);
+            this.addCourseName.Name = "addCourseName";
+            this.addCourseName.Size = new System.Drawing.Size(100, 26);
+            this.addCourseName.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(20, 63);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(155, 30);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Course code:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(20, 33);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(162, 30);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Course name:";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.assignCourseTeacherButton);
+            this.groupBox7.Controls.Add(this.assignCourseCode);
+            this.groupBox7.Controls.Add(this.assignCourseTeacherId);
+            this.groupBox7.Controls.Add(this.label15);
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Location = new System.Drawing.Point(789, 197);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(284, 151);
+            this.groupBox7.TabIndex = 10;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Assign Course to Teachers";
+            // 
+            // assignCourseTeacherButton
+            // 
+            this.assignCourseTeacherButton.Location = new System.Drawing.Point(93, 107);
+            this.assignCourseTeacherButton.Name = "assignCourseTeacherButton";
+            this.assignCourseTeacherButton.Size = new System.Drawing.Size(75, 29);
+            this.assignCourseTeacherButton.TabIndex = 9;
+            this.assignCourseTeacherButton.Text = "Assign";
+            this.assignCourseTeacherButton.UseVisualStyleBackColor = true;
+            this.assignCourseTeacherButton.Click += new System.EventHandler(this.assignCourseTeacherButton_Click);
+            // 
+            // assignCourseCode
+            // 
+            this.assignCourseCode.Location = new System.Drawing.Point(164, 66);
+            this.assignCourseCode.Name = "assignCourseCode";
+            this.assignCourseCode.Size = new System.Drawing.Size(100, 26);
+            this.assignCourseCode.TabIndex = 8;
+            // 
+            // assignCourseTeacherId
+            // 
+            this.assignCourseTeacherId.Location = new System.Drawing.Point(164, 30);
+            this.assignCourseTeacherId.Name = "assignCourseTeacherId";
+            this.assignCourseTeacherId.Size = new System.Drawing.Size(100, 26);
+            this.assignCourseTeacherId.TabIndex = 5;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(20, 63);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(103, 20);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Course code:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(20, 33);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(138, 30);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Teacher ID:";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.enrollCourseStudentButton);
+            this.groupBox8.Controls.Add(this.enrollCourseCode);
+            this.groupBox8.Controls.Add(this.enrollCourseStudentId);
+            this.groupBox8.Controls.Add(this.label17);
+            this.groupBox8.Controls.Add(this.label18);
+            this.groupBox8.Location = new System.Drawing.Point(789, 378);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(284, 151);
+            this.groupBox8.TabIndex = 10;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Enroll Course to Students";
+            // 
+            // enrollCourseStudentButton
+            // 
+            this.enrollCourseStudentButton.Location = new System.Drawing.Point(93, 107);
+            this.enrollCourseStudentButton.Name = "enrollCourseStudentButton";
+            this.enrollCourseStudentButton.Size = new System.Drawing.Size(75, 29);
+            this.enrollCourseStudentButton.TabIndex = 9;
+            this.enrollCourseStudentButton.Text = "Enroll";
+            this.enrollCourseStudentButton.UseVisualStyleBackColor = true;
+            // 
+            // enrollCourseCode
+            // 
+            this.enrollCourseCode.Location = new System.Drawing.Point(164, 66);
+            this.enrollCourseCode.Name = "enrollCourseCode";
+            this.enrollCourseCode.Size = new System.Drawing.Size(100, 26);
+            this.enrollCourseCode.TabIndex = 8;
+            // 
+            // enrollCourseStudentId
+            // 
+            this.enrollCourseStudentId.Location = new System.Drawing.Point(164, 30);
+            this.enrollCourseStudentId.Name = "enrollCourseStudentId";
+            this.enrollCourseStudentId.Size = new System.Drawing.Size(100, 26);
+            this.enrollCourseStudentId.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(20, 63);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 20);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "Course code:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(20, 33);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(137, 30);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Student ID:";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.assignedCourseListbox);
+            this.groupBox9.Controls.Add(this.showAssignedCoursesButton);
+            this.groupBox9.Controls.Add(this.showAssignedCoursesTeacherId);
+            this.groupBox9.Controls.Add(this.label19);
+            this.groupBox9.Location = new System.Drawing.Point(1094, 25);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(442, 305);
+            this.groupBox9.TabIndex = 11;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Show Assigned Courses";
+            // 
+            // assignedCourseListbox
+            // 
+            this.assignedCourseListbox.FormattingEnabled = true;
+            this.assignedCourseListbox.ItemHeight = 20;
+            this.assignedCourseListbox.Location = new System.Drawing.Point(22, 110);
+            this.assignedCourseListbox.Name = "assignedCourseListbox";
+            this.assignedCourseListbox.Size = new System.Drawing.Size(398, 164);
+            this.assignedCourseListbox.TabIndex = 5;
+            // 
+            // showAssignedCoursesButton
+            // 
+            this.showAssignedCoursesButton.Location = new System.Drawing.Point(140, 62);
+            this.showAssignedCoursesButton.Name = "showAssignedCoursesButton";
+            this.showAssignedCoursesButton.Size = new System.Drawing.Size(133, 29);
+            this.showAssignedCoursesButton.TabIndex = 4;
+            this.showAssignedCoursesButton.Text = "Show Courses";
+            this.showAssignedCoursesButton.UseVisualStyleBackColor = true;
+            this.showAssignedCoursesButton.Click += new System.EventHandler(this.showAssignedCoursesButton_Click);
+            // 
+            // showAssignedCoursesTeacherId
+            // 
+            this.showAssignedCoursesTeacherId.Location = new System.Drawing.Point(233, 30);
+            this.showAssignedCoursesTeacherId.Name = "showAssignedCoursesTeacherId";
+            this.showAssignedCoursesTeacherId.Size = new System.Drawing.Size(100, 26);
+            this.showAssignedCoursesTeacherId.TabIndex = 3;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(90, 33);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(138, 30);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Teacher ID:";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.enrolledCourseListbox);
+            this.groupBox10.Controls.Add(this.showEnrolledCourses);
+            this.groupBox10.Controls.Add(this.showEnrolledCoursesStudentId);
+            this.groupBox10.Controls.Add(this.label20);
+            this.groupBox10.Location = new System.Drawing.Point(1094, 357);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(442, 326);
+            this.groupBox10.TabIndex = 7;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Show Enrolled Courses";
+            // 
+            // enrolledCourseListbox
+            // 
+            this.enrolledCourseListbox.FormattingEnabled = true;
+            this.enrolledCourseListbox.ItemHeight = 20;
+            this.enrolledCourseListbox.Location = new System.Drawing.Point(22, 110);
+            this.enrolledCourseListbox.Name = "enrolledCourseListbox";
+            this.enrolledCourseListbox.Size = new System.Drawing.Size(398, 184);
+            this.enrolledCourseListbox.TabIndex = 5;
+            // 
+            // showEnrolledCourses
+            // 
+            this.showEnrolledCourses.Location = new System.Drawing.Point(140, 62);
+            this.showEnrolledCourses.Name = "showEnrolledCourses";
+            this.showEnrolledCourses.Size = new System.Drawing.Size(133, 29);
+            this.showEnrolledCourses.TabIndex = 4;
+            this.showEnrolledCourses.Text = "Show Courses:";
+            this.showEnrolledCourses.UseVisualStyleBackColor = true;
+            // 
+            // showEnrolledCoursesStudentId
+            // 
+            this.showEnrolledCoursesStudentId.Location = new System.Drawing.Point(233, 30);
+            this.showEnrolledCoursesStudentId.Name = "showEnrolledCoursesStudentId";
+            this.showEnrolledCoursesStudentId.Size = new System.Drawing.Size(100, 26);
+            this.showEnrolledCoursesStudentId.TabIndex = 3;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(90, 33);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(137, 30);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Student ID:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 713);
+            this.ClientSize = new System.Drawing.Size(1560, 713);
+            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.groupBox9);
+            this.Controls.Add(this.groupBox8);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -432,6 +733,16 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -474,6 +785,34 @@
         private System.Windows.Forms.TextBox showTeachersDeptCode;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox addTeacherDesignation;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button addCourseButton;
+        private System.Windows.Forms.TextBox addCourseCode;
+        private System.Windows.Forms.TextBox addCourseName;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button assignCourseTeacherButton;
+        private System.Windows.Forms.TextBox assignCourseCode;
+        private System.Windows.Forms.TextBox assignCourseTeacherId;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button enrollCourseStudentButton;
+        private System.Windows.Forms.TextBox enrollCourseCode;
+        private System.Windows.Forms.TextBox enrollCourseStudentId;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.ListBox assignedCourseListbox;
+        private System.Windows.Forms.Button showAssignedCoursesButton;
+        private System.Windows.Forms.TextBox showAssignedCoursesTeacherId;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.ListBox enrolledCourseListbox;
+        private System.Windows.Forms.Button showEnrolledCourses;
+        private System.Windows.Forms.TextBox showEnrolledCoursesStudentId;
+        private System.Windows.Forms.Label label20;
     }
 }
 

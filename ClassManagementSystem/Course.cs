@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace ClassManagementSystem
 {
-    abstract internal class Person
+    internal class Course
     {
-        public int id { get; }
         public string name { get; }
-        public Department dept { get; }
+        public int code { get; }
 
-        public Person(int id, string name, Department dept)
+        public Course(int code, string name)
         {
-            this.id = id;
+            this.code = code;
             this.name = name;
-            this.dept = dept;
         }
     }
 }
