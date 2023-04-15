@@ -53,6 +53,15 @@ namespace ClassManagementSystem
             return null;
         }
 
+        private Student getStudent(int id)
+        {
+            foreach (Student student in studentList)
+            {
+                if (student.id == id) return student;
+            }
+            return null;
+        }
+
         private void addDept_Click(object sender, EventArgs e)
         {
             if (addDeptName.Text.Length == 0)
@@ -67,7 +76,6 @@ namespace ClassManagementSystem
             }
             foreach (char ch in addDeptCode.Text)
             {
-                // ch >= '0' && ch <= '9'
                 if (ch < '0' || ch > '9')
                 {
                     MessageBox.Show("Please insert proper department code!");
@@ -336,7 +344,7 @@ namespace ClassManagementSystem
                 }
             }
 
-            getTeacher(teacherId).assignCourse(getCourse(courseCode));
+            getTeacher(teacherId).addCourse(getCourse(courseCode));
 
             MessageBox.Show("Course assigned to teacher.");
         }
@@ -375,6 +383,53 @@ namespace ClassManagementSystem
                 if (course.code % 2 == 0) data += "Lab";
                 else data += "Theory";
                 assignedCourseListbox.Items.Add(data);
+            }
+        }
+
+        private void enrollCourseStudentButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(enrollCourseStudentId.Text);
+                int courseCode = int.Parse(enrollCourseCode.Text);
+
+                if (getStudent(id) == null)
+                    throw new StudentNotFoundException();
+                if (getCourse(courseCode) == null)
+                    throw new ApplicationException("Course Not Found.");
+
+                getStudent(id).addCourse(getCourse(courseCode));
+
+                MessageBox.Show("Student enrolled in this course.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void showEnrolledCourses_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(showEnrolledCoursesStudentId.Text);
+
+                enrolledCourseListbox.Items.Clear();
+                enrolledCourseListbox.Items.Add("Name\tCode");
+
+                if (getStudent(id) == null)
+                    throw new StudentNotFoundException();
+
+                List<Course> courses = getStudent(id).getCourseList();
+
+                foreach (Course course in courses)
+                {
+                    enrolledCourseListbox.Items.Add(course.name + "\t" + course.code);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

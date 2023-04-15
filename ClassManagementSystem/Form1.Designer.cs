@@ -487,7 +487,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(20, 63);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(155, 30);
+            this.label13.Size = new System.Drawing.Size(103, 20);
             this.label13.TabIndex = 7;
             this.label13.Text = "Course code:";
             // 
@@ -496,7 +496,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(20, 33);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(162, 30);
+            this.label14.Size = new System.Drawing.Size(108, 20);
             this.label14.TabIndex = 6;
             this.label14.Text = "Course name:";
             // 
@@ -552,7 +552,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(20, 33);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(138, 30);
+            this.label16.Size = new System.Drawing.Size(92, 20);
             this.label16.TabIndex = 6;
             this.label16.Text = "Teacher ID:";
             // 
@@ -578,6 +578,7 @@
             this.enrollCourseStudentButton.TabIndex = 9;
             this.enrollCourseStudentButton.Text = "Enroll";
             this.enrollCourseStudentButton.UseVisualStyleBackColor = true;
+            this.enrollCourseStudentButton.Click += new System.EventHandler(this.enrollCourseStudentButton_Click);
             // 
             // enrollCourseCode
             // 
@@ -607,7 +608,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(20, 33);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(137, 30);
+            this.label18.Size = new System.Drawing.Size(91, 20);
             this.label18.TabIndex = 6;
             this.label18.Text = "Student ID:";
             // 
@@ -655,7 +656,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(90, 33);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(138, 30);
+            this.label19.Size = new System.Drawing.Size(92, 20);
             this.label19.TabIndex = 2;
             this.label19.Text = "Teacher ID:";
             // 
@@ -689,6 +690,7 @@
             this.showEnrolledCourses.TabIndex = 4;
             this.showEnrolledCourses.Text = "Show Courses:";
             this.showEnrolledCourses.UseVisualStyleBackColor = true;
+            this.showEnrolledCourses.Click += new System.EventHandler(this.showEnrolledCourses_Click);
             // 
             // showEnrolledCoursesStudentId
             // 
@@ -702,7 +704,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(90, 33);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(137, 30);
+            this.label20.Size = new System.Drawing.Size(91, 20);
             this.label20.TabIndex = 2;
             this.label20.Text = "Student ID:";
             // 
