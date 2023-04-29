@@ -1,0 +1,8 @@
+E:\OOC-I-Classes\AccessModifiers\bin\Debug\AccessModifiers.exe.config
+E:\OOC-I-Classes\AccessModifiers\bin\Debug\AccessModifiers.exe
+E:\OOC-I-Classes\AccessModifiers\bin\Debug\AccessModifiers.pdb
+E:\OOC-I-Classes\AccessModifiers\obj\Debug\AccessModifiers.csproj.SuggestedBindingRedirects.cache
+E:\OOC-I-Classes\AccessModifiers\obj\Debug\AccessModifiers.csproj.CoreCompileInputs.cache
+E:\OOC-I-Classes\AccessModifiers\obj\Debug\AccessModifiers.exe
+E:\OOC-I-Classes\AccessModifiers\obj\Debug\AccessModifiers.pdb
+E:\OOC-I-Classes\AccessModifiers\obj\Debug\AccessModifiers.csproj.AssemblyReference.cache

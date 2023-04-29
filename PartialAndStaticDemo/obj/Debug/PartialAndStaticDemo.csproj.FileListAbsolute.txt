@@ -1,0 +1,8 @@
+E:\OOC-I-Classes\PartialAndStaticDemo\bin\Debug\PartialAndStaticDemo.exe.config
+E:\OOC-I-Classes\PartialAndStaticDemo\bin\Debug\PartialAndStaticDemo.exe
+E:\OOC-I-Classes\PartialAndStaticDemo\bin\Debug\PartialAndStaticDemo.pdb
+E:\OOC-I-Classes\PartialAndStaticDemo\obj\Debug\PartialAndStaticDemo.csproj.AssemblyReference.cache
+E:\OOC-I-Classes\PartialAndStaticDemo\obj\Debug\PartialAndStaticDemo.csproj.SuggestedBindingRedirects.cache
+E:\OOC-I-Classes\PartialAndStaticDemo\obj\Debug\PartialAndStaticDemo.csproj.CoreCompileInputs.cache
+E:\OOC-I-Classes\PartialAndStaticDemo\obj\Debug\PartialAndStaticDemo.exe
+E:\OOC-I-Classes\PartialAndStaticDemo\obj\Debug\PartialAndStaticDemo.pdb

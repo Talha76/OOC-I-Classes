@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "969aeff4-dfed-45c7-9e3f-869835b8370b": {
+      "ProjectGuid": "969aeff4-dfed-45c7-9e3f-869835b8370b",
+      "DisplayName": "ConstructorDestructorGetterSetter",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -218,7 +218,6 @@
             this.addStudentButton.TabIndex = 4;
             this.addStudentButton.Text = "Add";
             this.addStudentButton.UseVisualStyleBackColor = true;
-            this.addStudentButton.Click += new System.EventHandler(this.addStudentButton_Click);
             // 
             // addStudentName
             // 
@@ -282,7 +281,6 @@
             this.showStudentsButton.TabIndex = 4;
             this.showStudentsButton.Text = "Show Students";
             this.showStudentsButton.UseVisualStyleBackColor = true;
-            this.showStudentsButton.Click += new System.EventHandler(this.showStudentsButton_Click);
             // 
             // showStudentsDeptCode
             // 
@@ -362,7 +360,6 @@
             this.addTeacherButton.TabIndex = 4;
             this.addTeacherButton.Text = "Add";
             this.addTeacherButton.UseVisualStyleBackColor = true;
-            this.addTeacherButton.Click += new System.EventHandler(this.addTeacherButton_Click);
             // 
             // addTeacherId
             // 
@@ -426,7 +423,6 @@
             this.showTeachersButton.TabIndex = 4;
             this.showTeachersButton.Text = "Show Teachers";
             this.showTeachersButton.UseVisualStyleBackColor = true;
-            this.showTeachersButton.Click += new System.EventHandler(this.showTeachersButton_Click);
             // 
             // showTeachersDeptCode
             // 
@@ -466,7 +462,6 @@
             this.addCourseButton.TabIndex = 9;
             this.addCourseButton.Text = "Add";
             this.addCourseButton.UseVisualStyleBackColor = true;
-            this.addCourseButton.Click += new System.EventHandler(this.addCourseButton_Click);
             // 
             // addCourseCode
             // 
@@ -522,7 +517,6 @@
             this.assignCourseTeacherButton.TabIndex = 9;
             this.assignCourseTeacherButton.Text = "Assign";
             this.assignCourseTeacherButton.UseVisualStyleBackColor = true;
-            this.assignCourseTeacherButton.Click += new System.EventHandler(this.assignCourseTeacherButton_Click);
             // 
             // assignCourseCode
             // 
@@ -578,7 +572,6 @@
             this.enrollCourseStudentButton.TabIndex = 9;
             this.enrollCourseStudentButton.Text = "Enroll";
             this.enrollCourseStudentButton.UseVisualStyleBackColor = true;
-            this.enrollCourseStudentButton.Click += new System.EventHandler(this.enrollCourseStudentButton_Click);
             // 
             // enrollCourseCode
             // 
@@ -642,7 +635,6 @@
             this.showAssignedCoursesButton.TabIndex = 4;
             this.showAssignedCoursesButton.Text = "Show Courses";
             this.showAssignedCoursesButton.UseVisualStyleBackColor = true;
-            this.showAssignedCoursesButton.Click += new System.EventHandler(this.showAssignedCoursesButton_Click);
             // 
             // showAssignedCoursesTeacherId
             // 
@@ -690,7 +682,6 @@
             this.showEnrolledCourses.TabIndex = 4;
             this.showEnrolledCourses.Text = "Show Courses:";
             this.showEnrolledCourses.UseVisualStyleBackColor = true;
-            this.showEnrolledCourses.Click += new System.EventHandler(this.showEnrolledCourses_Click);
             // 
             // showEnrolledCoursesStudentId
             // 

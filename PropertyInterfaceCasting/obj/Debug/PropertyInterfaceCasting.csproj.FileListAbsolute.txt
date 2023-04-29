@@ -1,0 +1,8 @@
+E:\OOC-I-Classes\PropertyInterfaceCasting\bin\Debug\PropertyInterfaceCasting.exe.config
+E:\OOC-I-Classes\PropertyInterfaceCasting\bin\Debug\PropertyInterfaceCasting.exe
+E:\OOC-I-Classes\PropertyInterfaceCasting\bin\Debug\PropertyInterfaceCasting.pdb
+E:\OOC-I-Classes\PropertyInterfaceCasting\obj\Debug\PropertyInterfaceCasting.csproj.AssemblyReference.cache
+E:\OOC-I-Classes\PropertyInterfaceCasting\obj\Debug\PropertyInterfaceCasting.csproj.SuggestedBindingRedirects.cache
+E:\OOC-I-Classes\PropertyInterfaceCasting\obj\Debug\PropertyInterfaceCasting.csproj.CoreCompileInputs.cache
+E:\OOC-I-Classes\PropertyInterfaceCasting\obj\Debug\PropertyInterfaceCasting.exe
+E:\OOC-I-Classes\PropertyInterfaceCasting\obj\Debug\PropertyInterfaceCasting.pdb

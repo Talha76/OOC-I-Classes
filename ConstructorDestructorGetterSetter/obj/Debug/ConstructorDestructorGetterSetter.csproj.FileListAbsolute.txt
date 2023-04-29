@@ -1,0 +1,8 @@
+E:\OOC-I-Classes\ConstructorDestructorGetterSetter\bin\Debug\ConstructorDestructorGetterSetter.exe.config
+E:\OOC-I-Classes\ConstructorDestructorGetterSetter\bin\Debug\ConstructorDestructorGetterSetter.exe
+E:\OOC-I-Classes\ConstructorDestructorGetterSetter\bin\Debug\ConstructorDestructorGetterSetter.pdb
+E:\OOC-I-Classes\ConstructorDestructorGetterSetter\obj\Debug\ConstructorDestructorGetterSetter.csproj.AssemblyReference.cache
+E:\OOC-I-Classes\ConstructorDestructorGetterSetter\obj\Debug\ConstructorDestructorGetterSetter.csproj.SuggestedBindingRedirects.cache
+E:\OOC-I-Classes\ConstructorDestructorGetterSetter\obj\Debug\ConstructorDestructorGetterSetter.csproj.CoreCompileInputs.cache
+E:\OOC-I-Classes\ConstructorDestructorGetterSetter\obj\Debug\ConstructorDestructorGetterSetter.exe
+E:\OOC-I-Classes\ConstructorDestructorGetterSetter\obj\Debug\ConstructorDestructorGetterSetter.pdb
