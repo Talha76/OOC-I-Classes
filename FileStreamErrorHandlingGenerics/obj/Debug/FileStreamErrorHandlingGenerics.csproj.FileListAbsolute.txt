@@ -1,0 +1,8 @@
+E:\OOC-I-Classes\FileStreamErrorHandlingGenerics\bin\Debug\FileStreamErrorHandlingGenerics.exe.config
+E:\OOC-I-Classes\FileStreamErrorHandlingGenerics\bin\Debug\FileStreamErrorHandlingGenerics.exe
+E:\OOC-I-Classes\FileStreamErrorHandlingGenerics\bin\Debug\FileStreamErrorHandlingGenerics.pdb
+E:\OOC-I-Classes\FileStreamErrorHandlingGenerics\obj\Debug\FileStreamErrorHandlingGenerics.csproj.AssemblyReference.cache
+E:\OOC-I-Classes\FileStreamErrorHandlingGenerics\obj\Debug\FileStreamErrorHandlingGenerics.csproj.SuggestedBindingRedirects.cache
+E:\OOC-I-Classes\FileStreamErrorHandlingGenerics\obj\Debug\FileStreamErrorHandlingGenerics.csproj.CoreCompileInputs.cache
+E:\OOC-I-Classes\FileStreamErrorHandlingGenerics\obj\Debug\FileStreamErrorHandlingGenerics.exe
+E:\OOC-I-Classes\FileStreamErrorHandlingGenerics\obj\Debug\FileStreamErrorHandlingGenerics.pdb
